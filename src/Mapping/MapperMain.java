@@ -13,7 +13,7 @@ public class MapperMain {
         ReadFile();
 //        UnComment If it going to be tested for Mapping
         List<Pair> sortedPairs = sortPair(PairList.getPairs());
-         sortedPairs.forEach((pair) -> System.out.println(pair));
+//         sortedPairs.forEach((pair) -> System.out.println(pair));
     }
 
     public static List<Pair> sortPair(List<Pair> pairs) {

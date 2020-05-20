@@ -2,7 +2,7 @@ package Reducing;
 
 import org.junit.Test;
 
-public class TestShuffle {
+public class TestReducerInputTest {
 
     @Test
     void TestReduceShuffled(){

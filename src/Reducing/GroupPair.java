@@ -45,6 +45,7 @@ public class GroupPair {
 //< a , [1, 1, 1, 1] >
     @Override
     public String toString() {
-        return "<"+this.key+", "+this.getValue().get(0)+">";
+        return "< "+this.key+" , "+this.getValue().get(0)+" >";
     }
 }
+//< a , 4 >
