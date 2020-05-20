@@ -13,8 +13,8 @@ public class GroupByMain {
         MapperMain.main(new String[]{});
         // uncomment this line to test along with Group and Sort
         setShuffle(); // Group and Sort the key-value mapped
-        getShuffledList();//
-//        getReducerOutPutList();
+//        getShuffledList();//
+        getReducerOutPutList();
     }
 
     private static void getReducerOutPutList() {
