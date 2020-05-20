@@ -14,7 +14,7 @@ public class GroupByMain {
         // uncomment this line to test along with Group and Sort
         setShuffle(); // Group and Sort the key-value mapped
 //        getShuffledList();//
-        getReducerOutPutList();
+//        getReducerOutPutList();
     }
 
     private static void getReducerOutPutList() {

@@ -1,39 +1,32 @@
-package Reducing;
+package MapReduceTest;
 
-import com.sun.jdi.ByteType;
+import Reducing.GroupByMain;
+import Reducing.GroupPairList;
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
 
 public class TestReducerOutputTest {
 
     @Test
     public void TestReducerData() throws IOException {
         boolean expected =true;
-        int i = 0;
+        GroupByMain.main(new String[]{});
+        GroupPairList.SummedPairList();
+        int i = 0,size = GroupPairList.getSummedPairList().size();
         BufferedReader bf = new BufferedReader(new FileReader("C:\\Users\\wr473\\IdeaProjects\\Big-Data\\src\\AssignmentTestFiles\\ReduceOutput.txt"));
         String nextline;
-        GroupPairList.SummedPairList();
-        int sizeActual = GroupPairList.getSummedPairList().size();
         while ((nextline = bf.readLine()) != null) {
-//
             if (!GroupPairList.getSummedPairList().
                     get(i).toString().equalsIgnoreCase(nextline)) {
                 expected = false;
-                System.out.println(GroupPairList.getSummedPairList().
-                        get(i).toString());
                 break;
             }
             i++;
+            if(i>size) {expected =false;break;};
         }
       bf.close();
 
